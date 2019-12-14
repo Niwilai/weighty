@@ -13,6 +13,6 @@ currentWeight = float(500)
 
 for key in db.search(User.weight):
     print(f"-----------{key['date']}-----------\n")
-    whatToPrint = '     ⇩' if (key['weight'] < currentWeight) else '     ⇧'
+    whatToPrint = '                         ⇩' if (key['weight'] < currentWeight) else '                         ⇧'
     print(key['weight'], whatToPrint, '\n\n')
     currentWeight = key['weight']
